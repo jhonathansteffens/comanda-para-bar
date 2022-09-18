@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   }
 
   onButtonPedidoClick() {
-    alert("Clicou em um novo pedido");
+    location.href =  document.location.hostname + '/order';
   }
 
   onButtonCadastrarItemClick() {
