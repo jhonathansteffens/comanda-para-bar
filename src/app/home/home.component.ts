@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  myImage: String;
+  constructor() {
+    this.myImage = "../../assets/images/bar-adelar.png"
+  }
 
   ngOnInit(): void {
   }
+
+  onButtonPedidoClick() {
+    alert("Clicou em um novo pedido");
+  }
+
+  onButtonCadastrarItemClick() {
+    alert("Clicou para cadastrar um item");
+  }
+
 
 }
