@@ -13,7 +13,6 @@
         <div class="card-body text-center align-items-center">
           <h5 class="card-title">Novo Pedido</h5>
           <app-card-item-order (newTask)="onChangeValor($event)"></app-card-item-order>
-          <app-card-item-order></app-card-item-order>
           <h5>Total: {{ total }}</h5>
           <div class="d-grid gap-2 " style="margin-top: 50px;">
             <a routerLink='/conclusion/true' class="btn btn-dark" type="button">Finalizar Pedido</a>

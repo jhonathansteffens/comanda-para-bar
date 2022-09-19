@@ -18,9 +18,9 @@ export class RegisterItemComponent implements OnInit {
   item!: Item;
   items?: Item[];
 
-  isSubmitted!: boolean;
+  submitted!: boolean;
   isShowMessage: boolean = false;
-  isSuccess!: boolean;
+  success!: boolean;
   message!: string;
 
   ngOnInit(): void {
@@ -30,19 +30,23 @@ export class RegisterItemComponent implements OnInit {
   }
 
   onSubmit() {
-    this.isSubmitted = true;
-    if (!this.itemService.isExist(this.item.name)) {
-      this.itemService.save(this.item);
-    } else {
-      this.itemService.update(this.item);
+    this.itemService
+      .save(this.item)
+      .then(() => {
+        this.success = true;
+        this.message =
+          'Produto Cadastrado Com Sucesso!';
+        this.submitted = true;
+      })
+      .catch((e) => {
+        this.success = false;
+        this.message = e;
+      })
+      .finally(() => {
+        console.log('A operação foi finalizada!');
+      });
+
     }
-    this.isShowMessage = true;
-    this.isSuccess = true;
-    this.message = 'Cadastro realizado com sucesso!';
-    this.form.reset();
-    this.item = new Item('', 0);
-    this.items = this.itemService.getItems();
-  }
 
 }
 

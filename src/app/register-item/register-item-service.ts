@@ -13,9 +13,15 @@ export class RegisterItemService {
   }
 
   save(item: Item) {
-    this.items = WebStorageUtil.get(Constants.ITEMS_KEY);
-    this.items.push(item);
-    WebStorageUtil.set(Constants.ITEMS_KEY, this.items);
+    const p = new Promise<Item>((resolve, reject) => {
+      setTimeout(() => {
+        const items = WebStorageUtil.get(Constants.ITEMS_KEY);
+        items.push(item);
+        WebStorageUtil.set(Constants.ITEMS_KEY, items);
+        resolve(item);
+      }, 5000);
+    });
+    return p;
   }
 
   update(item: Item) {
