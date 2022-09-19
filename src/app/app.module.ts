@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { OrderComponent } from './order/order.component';
 import { CardItemOrderComponent } from './card-item-order/card-item-order.component';
 import { ConclusionPageComponent } from './conclusion-page/conclusion-page.component';
+import { RegisterItemComponent } from './register-item/register-item.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,11 @@ import { ConclusionPageComponent } from './conclusion-page/conclusion-page.compo
     FooterComponent,
     OrderComponent,
     CardItemOrderComponent,
-    ConclusionPageComponent
+    ConclusionPageComponent,
+    RegisterItemComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule
   ],

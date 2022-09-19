@@ -1,3 +1,4 @@
+import { RegisterItemComponent } from './register-item/register-item.component';
 import { ConclusionPageComponent } from './conclusion-page/conclusion-page.component';
 import { OrderComponent } from './order/order.component';
 import { HomeComponent } from './home/home.component';
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'conclusion/:success',
     component: ConclusionPageComponent
+  },
+  {
+    path: 'register',
+    component: RegisterItemComponent
   }
 ];
 

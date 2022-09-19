@@ -1,0 +1,9 @@
+body {
+  background-image: url("../../assets/images/cerveja-background.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+ }

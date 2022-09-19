@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   }
 
   onButtonCadastrarItemClick() {
-    alert("Clicou para cadastrar um item");
+    location.href =  document.location.hostname + '/register';
   }
 
 
