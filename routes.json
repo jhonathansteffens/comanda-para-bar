@@ -1,0 +1,4 @@
+{
+  "/itens": "/items",
+  "/itens/:nomeItem": "/items?name=:name"
+}

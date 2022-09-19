@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row justify-content-center align-self-center mx-auto">
+    <div class="card" id="card-item">
+      <div class="card-body">
+        <p>Brahma</p>
+        <div class="row">
+          <span>Valor Unitário</span>
+          <span>R$ {{valor}}</span>
+          <label for="quantidade">Quantidade</label>
+          <input type="number" (keyup)="onKeyUp($event)" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
