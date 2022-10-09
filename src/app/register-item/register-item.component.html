@@ -21,7 +21,7 @@
                 type="text"
                 class="form-control"
                 [(ngModel)]="this.item.name"
-                pattern="^(\s?[A-ZÀ-Ú][a-zà-ú]*)+(\s[a-zà-ú]*)?(\s[A-ZÀ-Ú][a-zà-ú]*)?+"
+                pattern="^(\s?[A-ZÀ-Ú][a-zà-ú]*)+(\s[a-zà-ú]*)?(\s[A-ZÀ-Ú][a-zà-ú]*)?"
                 #name="ngModel"
                 required
                 />
@@ -45,7 +45,9 @@
             <div [hidden]="value.valid || value.untouched">
               Por favor, informe um valor para o item.
             </div>
-            <button [disabled]="!form.valid" type="submit" class="btn btn-dark">Cadastrar</button>
+            <div class="d-grid gap-2 " style="margin-top: 50px;">
+              <button [disabled]="!form.valid" routerLink='/conclusion/true' class="btn btn-dark" type="button">Finalizar Pedido</button>
+            </div>
           </form>
         </div>
       </div>
